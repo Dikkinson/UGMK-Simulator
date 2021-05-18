@@ -2001,7 +2001,7 @@ GameObject:
   - component: {fileID: 694750211}
   - component: {fileID: 694750212}
   m_Layer: 0
-  m_Name: Contoller
+  m_Name: DialogueController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2101,7 +2101,9 @@ MonoBehaviour:
     \u0432\u044B\u0445\u043E\u0434\u0438\u0442\u044C \u0438\u0437 \u043B\u0430\u0434\u043E\u043D\u0438."
   text: {fileID: 1859303633}
   timelines:
-  - {fileID: 1990111333}
+  - {fileID: 11400000, guid: 81c5343de96c8fa4da0e9e40527c14e0, type: 2}
+  - {fileID: 11400000, guid: 9b87f2380e4d99e4181ae7186c9e890f, type: 2}
+  director: {fileID: 1990111333}
 --- !u!1 &721068028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2579,12 +2581,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -2946,54 +2948,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 116db5115d067d14e8950fe3d46c0180, type: 3}
---- !u!1 &1308407661
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1308407663}
-  - component: {fileID: 1308407662}
-  m_Layer: 0
-  m_Name: TimelineDown
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!320 &1308407662
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1308407661}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 0}
-  m_InitialState: 1
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings: []
-  m_ExposedReferences:
-    m_References: []
---- !u!4 &1308407663
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1308407661}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.047190905, y: 8.425753, z: -3.9286542}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 23
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1450947662 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3467288373144158068, guid: 4b582d2dc8353214ebc21e0e00fb4c4b, type: 3}
@@ -3839,7 +3793,7 @@ GameObject:
   - component: {fileID: 1990111334}
   - component: {fileID: 1990111333}
   m_Layer: 0
-  m_Name: Timeline
+  m_Name: TimeLineDirector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3854,7 +3808,7 @@ PlayableDirector:
   m_GameObject: {fileID: 1990111332}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 81c5343de96c8fa4da0e9e40527c14e0, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 9b87f2380e4d99e4181ae7186c9e890f, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -3871,6 +3825,12 @@ PlayableDirector:
   - key: {fileID: 8966972887991997096, guid: 81c5343de96c8fa4da0e9e40527c14e0, type: 2}
     value: {fileID: 1582441791}
   - key: {fileID: -1133169715024538697, guid: 81c5343de96c8fa4da0e9e40527c14e0, type: 2}
+    value: {fileID: 559091156}
+  - key: {fileID: 1953061240594363848, guid: 9b87f2380e4d99e4181ae7186c9e890f, type: 2}
+    value: {fileID: 1510641849}
+  - key: {fileID: -3614347166064492310, guid: 9b87f2380e4d99e4181ae7186c9e890f, type: 2}
+    value: {fileID: 1582441791}
+  - key: {fileID: 3348209740764290638, guid: 9b87f2380e4d99e4181ae7186c9e890f, type: 2}
     value: {fileID: 559091156}
   m_ExposedReferences:
     m_References:
@@ -4454,7 +4414,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5f45ded8478232e419214b72b6d9eb61, type: 3}
       propertyPath: m_Name
-      value: stropalschik_unity
+      value: MainCharacter
       objectReference: {fileID: 0}
     - target: {fileID: 1581796241331510295, guid: 5f45ded8478232e419214b72b6d9eb61, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4539,7 +4499,7 @@ PrefabInstance:
     - target: {fileID: 5866666021909216657, guid: 5f45ded8478232e419214b72b6d9eb61, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: d91f819d99f3066439229249353a1542, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 5f45ded8478232e419214b72b6d9eb61, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0
