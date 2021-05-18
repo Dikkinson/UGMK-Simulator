@@ -1,5 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
 --- !u!114 &-6872070040521682051
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -388,6 +389,8 @@ MonoBehaviour:
   m_Clips: []
   m_Markers:
     m_Objects: []
+=======
+>>>>>>> 8c8d0691697d58f9fbd6cf343fb0cd3a22015a5f
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -401,16 +404,21 @@ MonoBehaviour:
   m_Name: Timeline
   m_EditorClassIdentifier: 
   m_Version: 0
+<<<<<<< HEAD
   m_Tracks:
   - {fileID: -161324430968604086}
   - {fileID: 5116443874334485436}
   - {fileID: -6872070040521682051}
+=======
+  m_Tracks: []
+>>>>>>> 8c8d0691697d58f9fbd6cf343fb0cd3a22015a5f
   m_FixedDuration: 0
   m_EditorSettings:
     m_Framerate: 60
     m_ScenePreview: 1
   m_DurationMode: 0
   m_MarkerTrack: {fileID: 0}
+<<<<<<< HEAD
 --- !u!74 &5048369947654098203
 AnimationClip:
   m_ObjectHideFlags: 0
@@ -732,3 +740,5 @@ MonoBehaviour:
   m_OpenClipOffsetRotation: {x: 0, y: 0, z: 0, w: 1}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_ApplyOffsets: 0
+=======
+>>>>>>> 8c8d0691697d58f9fbd6cf343fb0cd3a22015a5f
