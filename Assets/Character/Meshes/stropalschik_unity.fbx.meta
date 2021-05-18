@@ -8,31 +8,34 @@ ModelImporter:
     second: rig|01
   - first:
       74: -8495661959583077255
-    second: rig|02
+    second: Down
   - first:
       74: -3456275576027060815
-    second: rig|03
+    second: Side
   - first:
       74: -2265395236485303311
-    second: rig|04
+    second: Ziga
   - first:
       74: -4510106846900537073
-    second: rig|05
+    second: ZigaDown
   - first:
       74: -3237588645463354896
-    second: rig|06
+    second: NoNo
   - first:
       74: 5830355815203187801
-    second: rig|07
+    second: Clap
   - first:
       74: 5606012324819413112
-    second: rig|08
+    second: FullhandSide
   - first:
       74: -518154144676478023
     second: rig|Action
   - first:
       74: 2921659094232983241
     second: rig|PoseLib
+  - first:
+      74: 8451551337587442842
+    second: Up
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -62,7 +65,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: rig|01
+      name: Up
       takeName: rig|01
       internalID: 0
       firstFrame: 0
@@ -78,9 +81,9 @@ ModelImporter:
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -91,7 +94,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: rig|02
+      name: Down
       takeName: rig|02
       internalID: 0
       firstFrame: 0
@@ -120,7 +123,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: rig|03
+      name: Side
       takeName: rig|03
       internalID: 0
       firstFrame: 0
@@ -149,7 +152,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: rig|04
+      name: Ziga
       takeName: rig|04
       internalID: 0
       firstFrame: 0
@@ -178,7 +181,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: rig|05
+      name: ZigaDown
       takeName: rig|05
       internalID: 0
       firstFrame: 0
@@ -207,7 +210,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: rig|06
+      name: NoNo
       takeName: rig|06
       internalID: 0
       firstFrame: 0
@@ -236,7 +239,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: rig|07
+      name: Clap
       takeName: rig|07
       internalID: 0
       firstFrame: 0
@@ -265,7 +268,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: rig|08
+      name: FullhandSide
       takeName: rig|08
       internalID: 0
       firstFrame: 0
