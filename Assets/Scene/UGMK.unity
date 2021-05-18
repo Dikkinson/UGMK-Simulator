@@ -392,7 +392,7 @@ GameObject:
   - component: {fileID: 87646799}
   - component: {fileID: 87646798}
   m_Layer: 5
-  m_Name: Button
+  m_Name: NextBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -461,7 +461,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 87646799}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 694750212}
+        m_TargetAssemblyTypeName: DialogueController, Assembly-CSharp
+        m_MethodName: NextClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &87646799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -539,7 +551,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &313069579
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2087,7 +2099,9 @@ MonoBehaviour:
     \u0440\u0443\u043A\u0430, \u0442.\u043A. \u043D\u0430\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435
     \u0434\u0432\u0438\u0436\u0435\u043D\u0438\u044F \u0434\u043E\u043B\u0436\u043D\u043E
     \u0432\u044B\u0445\u043E\u0434\u0438\u0442\u044C \u0438\u0437 \u043B\u0430\u0434\u043E\u043D\u0438."
-  text: {fileID: 0}
+  text: {fileID: 1859303633}
+  timelines:
+  - {fileID: 1990111333}
 --- !u!1 &721068028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2528,6 +2542,7 @@ GameObject:
   - component: {fileID: 1038753485}
   - component: {fileID: 1038753484}
   - component: {fileID: 1038753483}
+  - component: {fileID: 1038753487}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2617,6 +2632,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1038753487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038753482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c70077824a0d71439637761eb318f18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1066518179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2919,6 +2946,54 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 116db5115d067d14e8950fe3d46c0180, type: 3}
+--- !u!1 &1308407661
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1308407663}
+  - component: {fileID: 1308407662}
+  m_Layer: 0
+  m_Name: TimelineDown
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!320 &1308407662
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308407661}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 0}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings: []
+  m_ExposedReferences:
+    m_References: []
+--- !u!4 &1308407663
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308407661}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.047190905, y: 8.425753, z: -3.9286542}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1450947662 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3467288373144158068, guid: 4b582d2dc8353214ebc21e0e00fb4c4b, type: 3}
@@ -3284,13 +3359,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<b>1) \u041F\u043E\u0434\u043D\u044F\u0442\u044C \u0433\u0440\u0443\u0437</b>\n\u0421\u0442\u0440\u043E\u043F\u0430\u043B\u044C\u0449\u0438\u043A
-    \u0441\u0442\u043E\u0438\u0442 \u043B\u0438\u0446\u043E\u043C \u043A \u043C\u0430\u0448\u0438\u043D\u0438\u0441\u0442\u0443
-    \u043A\u0440\u0430\u043D\u0430. \u041F\u0440\u0435\u0440\u044B\u0432\u0438\u0441\u0442\u043E\u0435
-    \u0434\u0432\u0438\u0436\u0435\u043D\u0438\u0435 \u0441\u043E\u0433\u043D\u0443\u0442\u043E\u0439
-    \u0432 \u043B\u043E\u043A\u0442\u0435 \u0440\u0443\u043A\u043E\u0439 \u0412\u0412\u0415\u0420\u0425
-    \u043D\u0430 \u0443\u0440\u043E\u0432\u043D\u0435 \u043F\u043E\u044F\u0441\u0430,
-    \u043B\u0430\u0434\u043E\u043D\u044C\u044E \u0432\u0432\u0435\u0440\u0445."
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3317,7 +3386,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 42.9
+  m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3738,7 +3807,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1974867677
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3770,7 +3839,7 @@ GameObject:
   - component: {fileID: 1990111334}
   - component: {fileID: 1990111333}
   m_Layer: 0
-  m_Name: TimeLine
+  m_Name: Timeline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3785,8 +3854,8 @@ PlayableDirector:
   m_GameObject: {fileID: 1990111332}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 4619a228a0024384ebb30865964a4859, type: 2}
-  m_InitialState: 1
+  m_PlayableAsset: {fileID: 11400000, guid: 81c5343de96c8fa4da0e9e40527c14e0, type: 2}
+  m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
@@ -3797,8 +3866,15 @@ PlayableDirector:
     value: {fileID: 559091156}
   - key: {fileID: 8553372849509926711, guid: 4619a228a0024384ebb30865964a4859, type: 2}
     value: {fileID: 1582441791}
+  - key: {fileID: -8450505852605306512, guid: 81c5343de96c8fa4da0e9e40527c14e0, type: 2}
+    value: {fileID: 1510641849}
+  - key: {fileID: 8966972887991997096, guid: 81c5343de96c8fa4da0e9e40527c14e0, type: 2}
+    value: {fileID: 1582441791}
+  - key: {fileID: -1133169715024538697, guid: 81c5343de96c8fa4da0e9e40527c14e0, type: 2}
+    value: {fileID: 559091156}
   m_ExposedReferences:
-    m_References: []
+    m_References:
+    - 5ccf2bfafecc62f4a91d00e5103ef8c1: {fileID: 694750210}
 --- !u!4 &1990111334
 Transform:
   m_ObjectHideFlags: 0
@@ -4029,7 +4105,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2120003920}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1038753487}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: OpenPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1974867676}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1038753487}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: ClosePanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 313069578}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 694750212}
+        m_TargetAssemblyTypeName: DialogueController, Assembly-CSharp
+        m_MethodName: StartLesson
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2120003920
 MonoBehaviour:
   m_ObjectHideFlags: 0
