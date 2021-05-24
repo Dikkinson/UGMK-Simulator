@@ -8,19 +8,8 @@ public class HandsTestScript : MonoBehaviour
 {
     public List<Button> choiseButtons;
     public Animator characterAnimator;
-
-    private List<string> questions = new List<string>()
-    {
-        "Поднять груз",
-        "Опустить груз",
-        "Повернуть стрелу",
-        "Поднять стрелу",
-        "Опустить стрелу",
-        "Стоп",
-        "Осторожно",
-        "Передвинуть мост",
-        "Передвинуть тележку"
-    };
+    public TextMeshProUGUI failsCountText;
+    private int failsCount = 0;
 
     private Dictionary<int, string> questionIntString = new Dictionary<int, string>()
     {
@@ -28,72 +17,74 @@ public class HandsTestScript : MonoBehaviour
         {1, "Опустить груз"},
         {2, "Поднять груз"},
         {3, "Передвинуть мост"},
-        {4, "Повернуть стрелу"},
+        {4, "Повернуть стрелу/Передвинуть тележку"},
         {5, "Стоп"},
         {6, "Поднять стрелу"},
         {7, "Опустить стрелу"},
-        {8, "Передвинуть тележку"},
     };
 
+    private int counter;
 
     public void StartTest()
     {
-        /*int questionId = questionsId[Random.Range(0, questionsId.Count)];
-        characterAnimator.SetInteger("State", questionId);
-        questionsId.Remove(questionId);*/
+        counter = questionIntString.Count;
+        GenerateQuestion();
     }
 
     public void BtnAnswer(bool isCorrect)
     {
         if (isCorrect)
         {
-            Debug.Log("correct");
+            counter--;
+            if (counter == 0)
+            {
+                Debug.Log("CONEC");
+            }
+            else
+            {
+                GenerateQuestion();
+            }
         }
         else
         {
-            Debug.Log("wrong");
+            failsCount++;
+            failsCountText.text = $"Ошибок: {failsCount}";
         }
     }
-
-    public void GenerateQuestrin()
+    List<int> questionsUserList = new List<int>() { 0, 1, 2, 3, 4, 5, 6, 7};
+    public void GenerateQuestion()
     {
         foreach (var button in choiseButtons)
         {
             button.onClick.RemoveAllListeners();
-        }
-        List<int> questionsIdList = new List<int>() { 0, 1, 2, 3, 4, 5, 6, 7, 8 };
+        }//ОЧИСТКА ВСЕХ ЛИСЕНЕРОВ КНОПОК ОТВЕТОВ
 
-        int questionId = questionsIdList[Random.Range(0, questionsIdList.Count)];
+        List<int> questionsIdList = new List<int>() { 0, 1, 2, 3, 4, 5, 6, 7};//МАКСКА ВОПРОСОВ
         
+        int questionId = questionsUserList[Random.Range(0, questionsUserList.Count)];//Получаем случайный вопрос
+        
+        questionsUserList.Remove(questionId);//Убираем его из маски
         questionsIdList.Remove(questionId);
         
-        List<int> buttonId = new List<int>() {0, 1, 2, 3};
+        List<int> buttonId = new List<int>() {0, 1, 2, 3};//Маска кнопок
 
-        int correctButton = Random.Range(0, buttonId.Count);
+        int correctButton = Random.Range(0, buttonId.Count);//Случайная правильная кнопка
 
         choiseButtons[correctButton].GetComponentInChildren<TextMeshProUGUI>().text =
-            questionIntString[questionId];
+            questionIntString[questionId]; // Задали правильный ответ правильной кнопке
 
-        buttonId.Remove(correctButton);
+        buttonId.Remove(correctButton);//Убрали из маски правильную кнопку
 
-        choiseButtons[correctButton].onClick.AddListener(() => BtnAnswer(true));
+        choiseButtons[correctButton].onClick.AddListener(() => BtnAnswer(true));//Добавили правильной кнопке он клик правильный
 
-        for (int i = 0; i < buttonId.Count; i++)
+        for (int i = 0; i < buttonId.Count; i++)//В оставшиеся кнопки
         {
-            int falseQuestionId = questionsIdList[Random.Range(0, questionsIdList.Count)];
-            questionsIdList.Remove(falseQuestionId);
+            int falseQuestionId = questionsIdList[Random.Range(0, questionsIdList.Count)];//Из макси вопросов выбрали рандомные ответы
+            questionsIdList.Remove(falseQuestionId);//Убрали из маски
             choiseButtons[buttonId[i]].GetComponentInChildren<TextMeshProUGUI>().text =
-                questionIntString[falseQuestionId];
-            choiseButtons[buttonId[i]].onClick.AddListener(() => BtnAnswer(false));
+                questionIntString[falseQuestionId];//Задали текст
+            choiseButtons[buttonId[i]].onClick.AddListener(() => BtnAnswer(false));//Задали он клик
         }
-        characterAnimator.SetInteger("State", questionId);
-    }
-
-    public void RightAnswer()
-    {
-    }
-
-    public void WrongAnswer()
-    {
+        characterAnimator.SetInteger("State", questionId);//Включили анимашку
     }
 }
