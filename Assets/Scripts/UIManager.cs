@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
+    
     public void OpenPanel(GameObject panel)
     {
         panel.SetActive(true);
