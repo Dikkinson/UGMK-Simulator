@@ -36,12 +36,11 @@ public class DialogueController : MonoBehaviour
 
     public void NextClip()
     {
-        //&& counter < timelines.Count
-        if (counter < dialogueText.Count)
+        if (counter < dialogueText.Count && counter < timelines.Count)
         {
             text.text = dialogueText[counter];
-            //var selectedAsset = timelines[counter];
-            //director.Play(selectedAsset);
+            var selectedAsset = timelines[counter];
+            director.Play(selectedAsset);
             counter++;
         }
         else

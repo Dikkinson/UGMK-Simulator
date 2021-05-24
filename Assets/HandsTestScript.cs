@@ -10,6 +10,12 @@ public class HandsTestScript : MonoBehaviour
     public Animator characterAnimator;
     public TextMeshProUGUI failsCountText;
     private int failsCount = 0;
+    public AudioSource audio;
+    public AudioClip correctAudio;
+    public AudioClip failAudio;
+    public GameObject endPanel;
+    public TextMeshProUGUI failsCountResultText;
+    public TextMeshProUGUI questionNumber;
 
     private Dictionary<int, string> questionIntString = new Dictionary<int, string>()
     {
@@ -23,11 +29,10 @@ public class HandsTestScript : MonoBehaviour
         {7, "Опустить стрелу"},
     };
 
-    private int counter;
+    private int counter = 0;
 
     public void StartTest()
     {
-        counter = questionIntString.Count;
         GenerateQuestion();
     }
 
@@ -35,14 +40,16 @@ public class HandsTestScript : MonoBehaviour
     {
         if (isCorrect)
         {
-            counter--;
-            if (counter == 0)
+            counter++;
+            if (counter > questionIntString.Count)
             {
-                Debug.Log("CONEC");
+                failsCountResultText.text = $"Количество ошибок: {failsCount}";
+                endPanel.SetActive(true);
+                gameObject.SetActive(false);
             }
             else
             {
-                GenerateQuestion();
+                StartCoroutine(CorrectAnswerCo());
             }
         }
         else
@@ -50,11 +57,14 @@ public class HandsTestScript : MonoBehaviour
             failsCount++;
             failsCountText.text = $"Ошибок: {failsCount}";
             failsCountText.GetComponent<Animation>().Play();
+            audio.PlayOneShot(failAudio);
         }
     }
     List<int> questionsUserList = new List<int>() { 0, 1, 2, 3, 4, 5, 6, 7};
+    private GameObject correctButtonGO;
     public void GenerateQuestion()
     {
+        questionNumber.text = $"Какой жест показывает стропальщик? ({counter}/{questionIntString.Count})";
         foreach (var button in choiseButtons)
         {
             button.onClick.RemoveAllListeners();
@@ -73,7 +83,7 @@ public class HandsTestScript : MonoBehaviour
 
         choiseButtons[correctButton].GetComponentInChildren<TextMeshProUGUI>().text =
             questionIntString[questionId]; // Задали правильный ответ правильной кнопке
-
+        correctButtonGO = choiseButtons[correctButton].gameObject;
         buttonId.Remove(correctButton);//Убрали из маски правильную кнопку
 
         choiseButtons[correctButton].onClick.AddListener(() => BtnAnswer(true));//Добавили правильной кнопке он клик правильный
@@ -87,5 +97,13 @@ public class HandsTestScript : MonoBehaviour
             choiseButtons[buttonId[i]].onClick.AddListener(() => BtnAnswer(false));//Задали он клик
         }
         characterAnimator.SetInteger("State", questionId);//Включили анимашку
+    }
+
+    IEnumerator CorrectAnswerCo()
+    {
+        correctButtonGO.GetComponent<Animation>().Play();
+        audio.PlayOneShot(correctAudio);
+        yield return new WaitForSeconds(0.75f);
+        GenerateQuestion();
     }
 }
