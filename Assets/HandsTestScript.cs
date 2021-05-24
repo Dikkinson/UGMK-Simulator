@@ -49,6 +49,7 @@ public class HandsTestScript : MonoBehaviour
         {
             failsCount++;
             failsCountText.text = $"Ошибок: {failsCount}";
+            failsCountText.GetComponent<Animation>().Play();
         }
     }
     List<int> questionsUserList = new List<int>() { 0, 1, 2, 3, 4, 5, 6, 7};
