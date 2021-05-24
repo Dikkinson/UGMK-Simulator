@@ -40,12 +40,15 @@ public class DialogueController : MonoBehaviour
         {
             text.text = dialogueText[counter];
             var selectedAsset = timelines[counter];
+            director.Stop();
+
             director.Play(selectedAsset);
             counter++;
         }
         else
         {
             StartTest();
+            director.Stop();
         }
     }
 

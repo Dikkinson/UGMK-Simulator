@@ -29,7 +29,7 @@ public class HandsTestScript : MonoBehaviour
         {7, "Опустить стрелу"},
     };
 
-    private int counter = 0;
+    private int counter = 1;
 
     public void StartTest()
     {
@@ -40,8 +40,8 @@ public class HandsTestScript : MonoBehaviour
     {
         if (isCorrect)
         {
-            counter++;
-            if (counter > questionIntString.Count)
+            
+            if (counter == questionIntString.Count)
             {
                 failsCountResultText.text = $"Количество ошибок: {failsCount}";
                 endPanel.SetActive(true);
@@ -50,6 +50,7 @@ public class HandsTestScript : MonoBehaviour
             else
             {
                 StartCoroutine(CorrectAnswerCo());
+                counter++;
             }
         }
         else
