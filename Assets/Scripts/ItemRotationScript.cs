@@ -31,7 +31,6 @@ public class ItemRotationScript : MonoBehaviour
         if(currentItem < stropili.Count && isNext)
         {
             currentItem++;
-            
         }
         else if (!isNext && currentItem > 0)
         {
