@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ItemRotationScript : MonoBehaviour
 {  
-    public float rotSpeed = 10f;
+    
     public List<GameObject> stropili;
     public int currentItem = 0;
     public TextMeshProUGUI text;
@@ -24,13 +24,7 @@ public class ItemRotationScript : MonoBehaviour
     };
     
     
-    void OnMouseDrag(){
-        float rotX = Input.GetAxis("Mouse X") * rotSpeed * Mathf.Deg2Rad;
-        float rotY = Input.GetAxis("Mouse Y") * rotSpeed * Mathf.Deg2Rad;
     
-        stropili[currentItem].transform.RotateAround(Vector3.up, -rotX);
-        stropili[currentItem].transform.RotateAround(Vector3.right, rotY);
-    }
 
     public void Click(bool isNext)
     {
