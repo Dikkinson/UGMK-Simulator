@@ -85,6 +85,7 @@ public class TestStropils : MonoBehaviour
         //создаем переменную для проверки правильных ответов
         bool isCorrect = true;
         
+        
         //получаем ответы на текущий вопрос
         var curreentListAnswers = questionsIntToList[counter];
         
