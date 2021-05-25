@@ -9,7 +9,8 @@ public class ItemRotationScript : MonoBehaviour
     public List<GameObject> stropili;
     public int currentItem = 0;
     public TextMeshProUGUI text;
-
+    public GameObject pnlTest;
+    
     private List<string> textsStropils = new List<string>()
     {
         "Строповку изделий, а также других грузов, имеющих петли, цапфы, производить за все предусмотренные для подъема в соответствующем положении петли, цапфы",
@@ -48,6 +49,12 @@ public class ItemRotationScript : MonoBehaviour
         camPos.x = posItem.x;
         Camera.main.transform.position = camPos;
         text.text = textsStropils[currentItem];
+    }
+
+    public void StartTest()
+    {
+        gameObject.SetActive(false);
+        pnlTest.SetActive(true);
     }
     
 }
