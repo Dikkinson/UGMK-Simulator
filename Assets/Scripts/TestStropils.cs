@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using MiscUtil;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -77,6 +78,8 @@ public class TestStropils : MonoBehaviour
         dropdownStrop.options = textStrop.OrderBy(a => rnd.Next()).Select(s => new Dropdown.OptionData(s)).ToList();
         //прибавляем счетчик
         counter++;
+        GameObjectsStropils[counter].GetComponentsInChildren<Transform>().ToList()
+            .ForEach(s => s.gameObject.SetActive(true));
 
         Vector3 posObject = GameObjectsStropils[counter].transform.position;
         Vector3 cameraPos =  Camera.main.transform.position;
