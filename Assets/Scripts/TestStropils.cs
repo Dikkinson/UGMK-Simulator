@@ -139,7 +139,7 @@ public class TestStropils : MonoBehaviour
     
     public IEnumerator Fail()
     {
-        btnGo.GetComponent<Animation>().Play("FailsBtn");
+        btnGo.GetComponent<Animation>().Play("FailBtn");
         audio.PlayOneShot(failAudio);
         yield return new WaitForSeconds(1f);
     }
