@@ -40,6 +40,10 @@ public class TestStropils : MonoBehaviour
     public Dropdown dropdownTypeSgp;
     public Dropdown dropdownStrop;
     public List<GameObject> GameObjectsStropils;
+    public GameObject btnGo;
+    public AudioSource audio;
+    public AudioClip correctAudio;
+    public AudioClip failAudio;
     
     public Dictionary<int, List<int>> questionsIntToList = new Dictionary<int, List<int>>()
     {
@@ -111,11 +115,29 @@ public class TestStropils : MonoBehaviour
         //если правильно след вопрос
         if (isCorrect && counter < questionsIntToList.Count)
         {
-            GenerateQuestion();
+            StartCoroutine(Correct());
         }
         else
         {
+            StartCoroutine(Fail());
             Debug.Log("dont correct answer");
         }
     }
+
+
+    public IEnumerator Correct()
+    {
+        btnGo.GetComponent<Animation>().Play("CorrectBtn");
+        audio.PlayOneShot(correctAudio);
+        yield return new WaitForSeconds(1f);
+        GenerateQuestion();
+    }
+    
+    public IEnumerator Fail()
+    {
+        btnGo.GetComponent<Animation>().Play("FailsBtn");
+        audio.PlayOneShot(failAudio);
+        yield return new WaitForSeconds(1f);
+    }
+    
 }
