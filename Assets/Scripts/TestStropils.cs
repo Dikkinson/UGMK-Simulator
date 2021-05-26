@@ -55,7 +55,12 @@ public class TestStropils : MonoBehaviour
     
     private int counter = 0;
     private Random rnd = new Random();
-    
+
+    private void Start()
+    {
+        GenerateQuestion();
+    }
+
     public void GenerateQuestion()
     {
         //задаем вариаты ответов
