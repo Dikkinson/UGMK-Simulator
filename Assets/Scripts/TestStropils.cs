@@ -78,8 +78,7 @@ public class TestStropils : MonoBehaviour
         dropdownStrop.options = textStrop.OrderBy(a => rnd.Next()).Select(s => new Dropdown.OptionData(s)).ToList();
         //прибавляем счетчик
         counter++;
-        GameObjectsStropils[counter].GetComponentsInChildren<Transform>().ToList()
-            .ForEach(s => s.gameObject.SetActive(true));
+        
 
         Vector3 posObject = GameObjectsStropils[counter].transform.position;
         Vector3 cameraPos =  Camera.main.transform.position;
@@ -130,6 +129,8 @@ public class TestStropils : MonoBehaviour
 
     public IEnumerator Correct()
     {
+        GameObjectsStropils[counter].GetComponentsInChildren<Transform>().ToList()
+            .ForEach(s => s.gameObject.SetActive(true));
         btnGo.GetComponent<Animation>().Play("CorrectBtn");
         audio.PlayOneShot(correctAudio);
         yield return new WaitForSeconds(1f);
