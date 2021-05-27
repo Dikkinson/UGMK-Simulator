@@ -8,7 +8,19 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 3db1837cc97a95e4c98610966fac2b0b
+    path: Assets/Scene/MainMenu.unity
+    guid: fcdad30541bd48941a6f81ed7bcffe9c
+  - enabled: 1
+    path: Assets/Scene/UGMK.unity
+    guid: 256c5b123df0779469bd14b2dc8cc5c2
+  - enabled: 1
+    path: Assets/Scene/Stropili.unity
+    guid: fb82de89da6a80b409b2611d37f9a065
+  - enabled: 1
+    path: Assets/Scene/FinalTest.unity
+    guid: 2a7bad75cbfc6734c9854b078d340fe3
   m_configObjects: {}
