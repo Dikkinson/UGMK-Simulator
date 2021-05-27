@@ -1804,6 +1804,7 @@ MonoBehaviour:
   panel: {fileID: 859092965}
   answerPanel: {fileID: 859092965}
   failPanel: {fileID: 941048268}
+  EndPanel: {fileID: 740130905}
   firstBtn: {fileID: 142984657}
   secondBtn: {fileID: 615405617}
   timelines:

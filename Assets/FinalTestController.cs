@@ -15,6 +15,7 @@ public class FinalTestController : MonoBehaviour
     public GameObject panel;
     public GameObject answerPanel;
     public GameObject failPanel;
+    public GameObject EndPanel;
     
     public GameObject firstBtn;
     public GameObject secondBtn;
@@ -70,6 +71,7 @@ public class FinalTestController : MonoBehaviour
             director.Play(selectedAsset);
             panel.SetActive(false);
             //end
+            EndPanel.SetActive(true);
         }
         else
         {
