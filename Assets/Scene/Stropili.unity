@@ -635,8 +635,8 @@ MonoBehaviour:
   - {fileID: 4072314725173101265}
   - {fileID: 1516636825}
   - {fileID: 673358031635506425}
-  - {fileID: 241151409}
   - {fileID: 191165375}
+  - {fileID: 241151409}
   - {fileID: 1131780390}
   btnGo: {fileID: 140567195}
   audio: {fileID: 125568722}
