@@ -12,6 +12,7 @@ public class RopeController : MonoBehaviour
         {
             other.GetComponent<MeshRenderer>().enabled = setActive;
             //other.gameObject.SetActive(setActive);
+            //
             
         }
     }
