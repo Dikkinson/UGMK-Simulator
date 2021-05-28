@@ -61,18 +61,20 @@ public class TestStropils : MonoBehaviour
     private int counter = 0;
     private Random rnd = new Random();
 
+    public List<GameObject> stropi;
+    
+    
     private void Start()
     {
+        stropi.ForEach(s => s.SetActive(false));
+        
         GenerateQuestion();
     }
 
     public void GenerateQuestion()
     {
         //задаем вариаты ответов
-        /*dropdownTypeStrapovki.options = textTypeStrapovki.Select(s => new Dropdown.OptionData(s)).ToList();
-        dropdownTypeSgp.options = textTypeSGP.Select(s => new Dropdown.OptionData(s)).ToList();
-        dropdownStrop.options = textStrop.Select(s => new Dropdown.OptionData(s)).ToList();*/
-        
+
         dropdownTypeStrapovki.options  = textTypeStrapovki.OrderBy(a => rnd.Next()).Select(s => new Dropdown.OptionData(s)).ToList();
         dropdownTypeSgp.options = textTypeSGP.OrderBy(a => rnd.Next()).Select(s => new Dropdown.OptionData(s)).ToList();
         dropdownStrop.options = textStrop.OrderBy(a => rnd.Next()).Select(s => new Dropdown.OptionData(s)).ToList();
