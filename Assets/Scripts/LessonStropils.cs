@@ -56,8 +56,9 @@ public class LessonStropils : MonoBehaviour
         camPos.x = posItem.x;
         Camera.main.transform.position = camPos;
         text.text = textsStropils[currentItem];
-
+        
         var clip = clips[currentItem];
+        source.Stop();
         source.PlayOneShot(clip);
     }
     
