@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class ItemRotationScript : MonoBehaviour
+public class LessonStropils : MonoBehaviour
 {  
     
     public List<GameObject> stropili;
