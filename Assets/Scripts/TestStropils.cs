@@ -45,7 +45,7 @@ public class TestStropils : MonoBehaviour
     public AudioSource audio;
     public AudioClip correctAudio;
     public AudioClip failAudio;
-    
+    public GameObject EndTest;
     public Dictionary<int, List<int>> questionsIntToList = new Dictionary<int, List<int>>()
     {
         {0, new List<int>() {2, 2, 0}},
@@ -117,9 +117,14 @@ public class TestStropils : MonoBehaviour
         }
             
         //если правильно след вопрос
-        if (isCorrect && counter < questionsIntToList.Count)
+        if (isCorrect && counter < questionsIntToList.Count - 1)
         {
             StartCoroutine(Correct());
+        }
+        else if(isCorrect && counter == questionsIntToList.Count - 1)
+        {
+            gameObject.SetActive(false);
+            EndTest.SetActive(true);
         }
         else
         {
