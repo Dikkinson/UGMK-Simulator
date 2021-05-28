@@ -10,10 +10,14 @@ public class LessonStropils : MonoBehaviour
     public List<GameObject> stropili;
     public int currentItem = 0;
     public TextMeshProUGUI text;
-    public GameObject pnlTest;
     public List<AudioClip> clips;
     public AudioSource source;
+    
+    public GameObject pnlTest;
     public GameObject PanelEndLesson;
+    public GameObject StartPanel;
+    public GameObject LessonPanel;
+    
     
     private List<string> textsStropils = new List<string>()
     {
@@ -25,14 +29,16 @@ public class LessonStropils : MonoBehaviour
     };
 
 
-    private void Start()
+    public void StartLesson()
     { 
+        StartPanel.SetActive(false);
+        LessonPanel.SetActive(true);
         Edit();
     }
 
     public void Click(bool isNext)
     {
-        if(currentItem < stropili.Count && isNext)
+        if(currentItem <= stropili.Count && isNext)
         {
             currentItem++;
         }
@@ -40,13 +46,13 @@ public class LessonStropils : MonoBehaviour
         {
             currentItem--;
         }
-        Edit();
-
         if (currentItem == stropili.Count)
         {
             gameObject.SetActive(false);
             PanelEndLesson.SetActive(true);
+            return;
         }
+        Edit();
     }
 
     public void Edit()
@@ -61,10 +67,8 @@ public class LessonStropils : MonoBehaviour
         source.Stop();
         source.PlayOneShot(clip);
     }
-    
-    
-    
-    
+
+
     public void StartTest()
     {
         PanelEndLesson.SetActive(false);

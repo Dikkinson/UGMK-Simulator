@@ -58,7 +58,7 @@ public class TestStropils : MonoBehaviour
         {7, new List<int>() {4, 2, 2}},//4,2,1
     };
     
-    private int counter = 0;
+    private int counter = -1;
     private Random rnd = new Random();
 
     public List<GameObject> stropi;
