@@ -3217,9 +3217,14 @@ MonoBehaviour:
   currentItem: 0
   text: {fileID: 354610952}
   pnlTest: {fileID: 125568719}
-  clips: []
-  source: {fileID: 0}
-  PanelEndLesson: {fileID: 0}
+  clips:
+  - {fileID: 8300000, guid: 68edd51880569194dbde16fafb2efad4, type: 3}
+  - {fileID: 8300000, guid: e57d4f4a22cd2b740b81d82ba4071fe9, type: 3}
+  - {fileID: 8300000, guid: 90824b22aed5f764ba865cfc2b635442, type: 3}
+  - {fileID: 8300000, guid: 68f3597c3cf25ab40b72a630615e6fa2, type: 3}
+  - {fileID: 8300000, guid: 56734a92c7de7fa4486e62ea495981da, type: 3}
+  source: {fileID: 770272743}
+  PanelEndLesson: {fileID: 2059034303}
 --- !u!82 &770272743
 AudioSource:
   m_ObjectHideFlags: 0
