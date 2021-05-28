@@ -131,7 +131,7 @@ public class TestStropils : MonoBehaviour
 
     public IEnumerator Correct()
     {
-        GameObjectsStropils[counter].transform.GetChild(0).GetComponentsInChildren<Transform>().ToList().ForEach(s => s.gameObject.SetActive(true));
+        GameObjectsStropils[counter].GetComponentInChildren<Transform>().gameObject.GetComponentsInChildren<Transform>().ToList().ForEach(s => s.gameObject.SetActive(true));
         btnGo.GetComponent<Animation>().Play("CorrectBtn");
         audio.PlayOneShot(correctAudio);
         yield return new WaitForSeconds(1f);
