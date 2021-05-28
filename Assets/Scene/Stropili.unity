@@ -642,6 +642,7 @@ MonoBehaviour:
   audio: {fileID: 125568722}
   correctAudio: {fileID: 8300000, guid: dd53816a83e4fee41878f0d5d33a8fd6, type: 3}
   failAudio: {fileID: 8300000, guid: f9411a5499c06b2499d0fef52f185ac7, type: 3}
+  EndTest: {fileID: 369725816}
   stropi:
   - {fileID: 4546270117779721656}
   - {fileID: 1172294401}
@@ -2311,7 +2312,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &369725817
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5205,7 +5206,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1204068375
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7590,9 +7591,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 770272742}
-        m_TargetAssemblyTypeName: LessonStropils, Assembly-CSharp
-        m_MethodName: StartTest
+      - m_Target: {fileID: 1971868842}
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: FinalTest
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
