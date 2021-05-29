@@ -44,7 +44,7 @@ ModelImporter:
     second: rig|idle
   - first:
       74: -5128506936891248088
-    second: rig|01
+    second: Up
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -74,7 +74,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: rig|01
+      name: Up
       takeName: rig|01
       internalID: 0
       firstFrame: 0
