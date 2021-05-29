@@ -1769,8 +1769,8 @@ PlayableDirector:
   m_GameObject: {fileID: 495417803}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 4a73e01c9f1fd224aa9c3428fa7d9993, type: 2}
-  m_InitialState: 0
+  m_PlayableAsset: {fileID: 11400000, guid: 2d4fd3f56bf34614fb8dd3ae0f603204, type: 2}
+  m_InitialState: 1
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
@@ -1787,8 +1787,10 @@ PlayableDirector:
     value: {fileID: 1253762349}
   - key: {fileID: 2256217890440237018, guid: 4a73e01c9f1fd224aa9c3428fa7d9993, type: 2}
     value: {fileID: 1038817789}
-  - key: {fileID: 6203538564501780411, guid: 4a73e01c9f1fd224aa9c3428fa7d9993, type: 2}
+  - key: {fileID: 8653828347501169507, guid: 4a73e01c9f1fd224aa9c3428fa7d9993, type: 2}
     value: {fileID: 1038817789}
+  - key: {fileID: -7909901793394044961, guid: 2d4fd3f56bf34614fb8dd3ae0f603204, type: 2}
+    value: {fileID: 1800137424}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &495417805
@@ -3927,6 +3929,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1731284447}
   m_CullTransparentMesh: 1
+--- !u!1 &1800137423 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6361558274069519370, guid: caee23d21e907504abf0d0e338db30a9, type: 3}
+  m_PrefabInstance: {fileID: 1308825949}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1800137424
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800137423}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1865665642
 GameObject:
   m_ObjectHideFlags: 0
