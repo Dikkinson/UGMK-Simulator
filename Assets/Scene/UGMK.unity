@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12584643, g: 0.10645525, b: 0.062182054, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -257,6 +257,7 @@ Animation:
   m_Animation: {fileID: 7400000, guid: 8b261f4a597318a428a44a75fd2f232b, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 8b261f4a597318a428a44a75fd2f232b, type: 2}
+  - {fileID: 7400000, guid: 88078b87cf737a84097ea9f4a4a19af5, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -2494,7 +2495,7 @@ MonoBehaviour:
   m_margin: {x: 35, y: 25, z: 35, w: 145.0195}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &464753182
@@ -3226,7 +3227,7 @@ MonoBehaviour:
   m_margin: {x: 3, y: 0, z: 3, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &577154262
@@ -3773,6 +3774,8 @@ PlayableDirector:
     value: {fileID: 1531840032}
   - key: {fileID: -8217519567573104663, guid: 7dea2268378f63f40b3eb288646a5094, type: 2}
     value: {fileID: 789687502}
+  - key: {fileID: -4231943823576659757, guid: f2e695d5030d2054393dfc750230be50, type: 2}
+    value: {fileID: 829458234}
   m_ExposedReferences:
     m_References:
     - 56ea1fa86877c4d4687ea7a01c2e0fdf: {fileID: 0}
@@ -4306,7 +4309,7 @@ MonoBehaviour:
   m_margin: {x: 3, y: 0, z: 3, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &785346788
@@ -4388,7 +4391,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7776026, y: 1}
+    m_SensorSize: {x: 1.7777777, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -4646,6 +4649,7 @@ Animation:
   m_Animation: {fileID: 7400000, guid: 8b261f4a597318a428a44a75fd2f232b, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 8b261f4a597318a428a44a75fd2f232b, type: 2}
+  - {fileID: 7400000, guid: 88078b87cf737a84097ea9f4a4a19af5, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -4938,6 +4942,8 @@ Animation:
   m_Animation: {fileID: 7400000, guid: 8b261f4a597318a428a44a75fd2f232b, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 8b261f4a597318a428a44a75fd2f232b, type: 2}
+  - {fileID: 7400000, guid: 6dc034e3df6160741aa0847f167f0f91, type: 2}
+  - {fileID: 7400000, guid: 88078b87cf737a84097ea9f4a4a19af5, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -5065,7 +5071,7 @@ MonoBehaviour:
   m_margin: {x: 3, y: 0, z: 3, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1172223096
@@ -5899,7 +5905,7 @@ MonoBehaviour:
   m_margin: {x: 35, y: 25, z: 35, w: 26.485565}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1513723558
@@ -6073,7 +6079,7 @@ MonoBehaviour:
   m_margin: {x: 3, y: 0, z: 3, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1552570721
@@ -7429,6 +7435,7 @@ Animation:
   m_Animation: {fileID: 7400000, guid: 8b261f4a597318a428a44a75fd2f232b, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 8b261f4a597318a428a44a75fd2f232b, type: 2}
+  - {fileID: 7400000, guid: 88078b87cf737a84097ea9f4a4a19af5, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0

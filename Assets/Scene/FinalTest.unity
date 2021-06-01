@@ -1641,8 +1641,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 76.5}
-  m_SizeDelta: {x: 836.53796, y: -212.5069}
+  m_AnchoredPosition: {x: 0, y: 81.376724}
+  m_SizeDelta: {x: 1400, y: -202.75345}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &452984695
 MonoBehaviour:
@@ -1664,7 +1664,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435\n"
+  m_text: "\u0421\u0442\u0440\u043E\u043F\u0430\u043B\u044C\u0449\u0438\u043A\u0443
+    \u043D\u0443\u0436\u043D\u043E \u043F\u0435\u0440\u0435\u043C\u0435\u0441\u0442\u0438\u0442\u044C
+    \u0433\u0440\u0443\u0437. \u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u044B\u0435
+    \u043E\u0442\u0432\u0435\u0442\u044B \u0432 \u0442\u043E\u0439 \u043F\u043E\u0441\u043B\u0435\u0434\u043E\u0432\u0430\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u0438,
+    \u0432 \u043A\u043E\u0442\u043E\u0440\u043E\u0439 \u0434\u043E\u043B\u0436\u0435\u043D
+    \u0434\u0435\u0439\u0441\u0442\u0432\u043E\u0432\u0430\u0442\u044C \u0441\u0442\u0440\u043E\u043F\u0430\u043B\u044C\u0449\u0438\u043A.
+    \u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 1 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ec6d733f873af9b4ea833a559aad75e6, type: 2}
   m_sharedMaterial: {fileID: 4983264967097786277, guid: ec6d733f873af9b4ea833a559aad75e6, type: 2}
@@ -1691,7 +1697,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 58
+  m_fontSize: 31.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1853,6 +1859,7 @@ MonoBehaviour:
   audio: {fileID: 495417807}
   correctAudio: {fileID: 8300000, guid: dd53816a83e4fee41878f0d5d33a8fd6, type: 3}
   failAudio: {fileID: 8300000, guid: f9411a5499c06b2499d0fef52f185ac7, type: 3}
+  text: {fileID: 452984695}
 --- !u!4 &495417806
 Transform:
   m_ObjectHideFlags: 0
