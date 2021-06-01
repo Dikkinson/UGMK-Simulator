@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using RotaryHeart.Lib.SerializableDictionary;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
@@ -26,6 +27,8 @@ public class FinalTestController : MonoBehaviour
     public AudioSource audio;
     public AudioClip correctAudio;
     public AudioClip failAudio;
+    public TextMeshProUGUI text;
+    
     
     public void BackCharacter()
     {
@@ -37,6 +40,8 @@ public class FinalTestController : MonoBehaviour
             director.Stop();
             director.Play(selectedAsset);
             firstBtn.SetActive(false);
+            text.text =
+                "Стропальщику нужно переместить груз. Выберите правильные ответы в той последовательности, в которой должен действовать стропальщик. Выберите 2 действие.";
         }
     }
     
@@ -50,6 +55,8 @@ public class FinalTestController : MonoBehaviour
             director.Stop();
             director.Play(selectedAsset);
             secondBtn.SetActive(false);
+            text.text =
+                "Стропальщику нужно переместить груз. Выберите правильные ответы в той последовательности, в которой должен действовать стропальщик. Выберите 3 действие.";
         }
         else
         {

@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class HandsTestScript : MonoBehaviour
@@ -34,6 +36,16 @@ public class HandsTestScript : MonoBehaviour
     public void StartTest()
     {
         GenerateQuestion();
+    }
+
+    public void Click(GameObject btn)
+    {
+        Debug.Log("huli");
+        if (btn.name != correctButtonGO.name)
+        {
+            Debug.Log("ne huli");
+            btn.GetComponent<Animation>().Play("AnswerFailBtnAnim");
+        }
     }
 
     public void BtnAnswer(bool isCorrect)
@@ -102,7 +114,7 @@ public class HandsTestScript : MonoBehaviour
 
     IEnumerator CorrectAnswerCo()
     {
-        correctButtonGO.GetComponent<Animation>().Play();
+        correctButtonGO.GetComponent<Animation>().Play("CorrectAnswerBtnAnim");
         audio.PlayOneShot(correctAudio);
         yield return new WaitForSeconds(0.75f);
         GenerateQuestion();
