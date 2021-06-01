@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -36,8 +37,9 @@ public class HandsTestScript : MonoBehaviour
     {
         GenerateQuestion();
     }
-
-    public void BtnAnswer(bool isCorrect)
+    
+    
+    public void BtnAnswer(bool isCorrect, [CanBeNull] GameObject btn)
     {
         if (isCorrect)
         {
@@ -59,8 +61,7 @@ public class HandsTestScript : MonoBehaviour
             failsCount++;
             failsCountText.text = $"Ошибок: {failsCount}";
             failsCountText.GetComponent<Animation>().Play();
-            EventSystem.current.currentSelectedGameObject.GetComponent<Animation>().Play("AnswerFailBtnAnim");
-            
+            btn.GetComponent<Animation>().Play("AnswerFailBtnAnim");
             audio.PlayOneShot(failAudio);
         }
     }
@@ -90,7 +91,7 @@ public class HandsTestScript : MonoBehaviour
         correctButtonGO = choiseButtons[correctButton].gameObject;
         buttonId.Remove(correctButton);//Убрали из маски правильную кнопку
 
-        choiseButtons[correctButton].onClick.AddListener(() => BtnAnswer(true));//Добавили правильной кнопке он клик правильный
+        choiseButtons[correctButton].onClick.AddListener(() => BtnAnswer(true, null));//Добавили правильной кнопке он клик правильный
 
         for (int i = 0; i < buttonId.Count; i++)//В оставшиеся кнопки
         {
@@ -98,7 +99,7 @@ public class HandsTestScript : MonoBehaviour
             questionsIdList.Remove(falseQuestionId);//Убрали из маски
             choiseButtons[buttonId[i]].GetComponentInChildren<TextMeshProUGUI>().text =
                 questionIntString[falseQuestionId];//Задали текст
-            choiseButtons[buttonId[i]].onClick.AddListener(() => BtnAnswer(false));//Задали он клик
+            choiseButtons[buttonId[i]].onClick.AddListener(() => BtnAnswer(false, choiseButtons[buttonId[i]].gameObject));//Задали он клик
         }
         characterAnimator.SetInteger("State", questionId);//Включили анимашку
     }
