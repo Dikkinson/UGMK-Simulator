@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
@@ -5,6 +6,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class HandsTestScript : MonoBehaviour
 {
@@ -32,9 +34,11 @@ public class HandsTestScript : MonoBehaviour
     };
 
     private int counter = 1;
+    
 
     public void StartTest()
     {
+        characterAnimator.gameObject.SetActive(true);
         GenerateQuestion();
     }
 
