@@ -40,10 +40,10 @@ public class HandsTestScript : MonoBehaviour
 
     public void Click([CanBeNull] GameObject btn)
     {
-        presseableBtn = btn;
+        btn.GetComponent<Animation>().Play("AnswerFailBtnAnim");
     }
 
-    private GameObject presseableBtn;
+    
     
     public void BtnAnswer(bool isCorrect)
     {
@@ -67,7 +67,6 @@ public class HandsTestScript : MonoBehaviour
             failsCount++;
             failsCountText.text = $"Ошибок: {failsCount}";
             failsCountText.GetComponent<Animation>().Play();
-            presseableBtn.GetComponent<Animation>().Play("AnswerFailBtnAnim");
             audio.PlayOneShot(failAudio);
         }
     }
