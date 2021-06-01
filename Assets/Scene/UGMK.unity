@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.12584643, g: 0.10645525, b: 0.062182054, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -206,7 +206,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 253908}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 615689210}
+        m_TargetAssemblyTypeName: HandsTestScript, Assembly-CSharp
+        m_MethodName: Click
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 253905}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &253908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4391,7 +4403,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777777, y: 1}
+    m_SensorSize: {x: 1.7776026, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -4598,7 +4610,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1015736374}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 615689210}
+        m_TargetAssemblyTypeName: HandsTestScript, Assembly-CSharp
+        m_MethodName: Click
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1015736371}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1015736374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4891,7 +4915,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1085301070}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 615689210}
+        m_TargetAssemblyTypeName: HandsTestScript, Assembly-CSharp
+        m_MethodName: Click
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1085301067}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1085301070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4942,7 +4978,6 @@ Animation:
   m_Animation: {fileID: 7400000, guid: 8b261f4a597318a428a44a75fd2f232b, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 8b261f4a597318a428a44a75fd2f232b, type: 2}
-  - {fileID: 7400000, guid: 6dc034e3df6160741aa0847f167f0f91, type: 2}
   - {fileID: 7400000, guid: 88078b87cf737a84097ea9f4a4a19af5, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
@@ -7384,7 +7419,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2073025624}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 615689210}
+        m_TargetAssemblyTypeName: HandsTestScript, Assembly-CSharp
+        m_MethodName: Click
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2073025621}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2073025624
 MonoBehaviour:
   m_ObjectHideFlags: 0

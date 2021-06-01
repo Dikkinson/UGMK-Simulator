@@ -38,13 +38,16 @@ public class HandsTestScript : MonoBehaviour
         GenerateQuestion();
     }
 
-    public void Click([CanBeNull] GameObject btn)
+    public void Click(GameObject btn)
     {
-        btn.GetComponent<Animation>().Play("AnswerFailBtnAnim");
+        Debug.Log("huli");
+        if (btn.name != correctButtonGO.name)
+        {
+            Debug.Log("ne huli");
+            btn.GetComponent<Animation>().Play("AnswerFailBtnAnim");
+        }
     }
 
-    
-    
     public void BtnAnswer(bool isCorrect)
     {
         if (isCorrect)
@@ -105,7 +108,6 @@ public class HandsTestScript : MonoBehaviour
             choiseButtons[buttonId[i]].GetComponentInChildren<TextMeshProUGUI>().text =
                 questionIntString[falseQuestionId];//Задали текст
             choiseButtons[buttonId[i]].onClick.AddListener(() => BtnAnswer(false));//Задали он клик
-            choiseButtons[buttonId[i]].onClick.AddListener((() => Click(choiseButtons[buttonId[i]].gameObject)));
         }
         characterAnimator.SetInteger("State", questionId);//Включили анимашку
     }
