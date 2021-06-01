@@ -37,9 +37,15 @@ public class HandsTestScript : MonoBehaviour
     {
         GenerateQuestion();
     }
+
+    public void Click([CanBeNull] GameObject btn)
+    {
+        presseableBtn = btn;
+    }
+
+    private GameObject presseableBtn;
     
-    
-    public void BtnAnswer(bool isCorrect, [CanBeNull] GameObject btn)
+    public void BtnAnswer(bool isCorrect)
     {
         if (isCorrect)
         {
@@ -61,7 +67,7 @@ public class HandsTestScript : MonoBehaviour
             failsCount++;
             failsCountText.text = $"Ошибок: {failsCount}";
             failsCountText.GetComponent<Animation>().Play();
-            btn.GetComponent<Animation>().Play("AnswerFailBtnAnim");
+            presseableBtn.GetComponent<Animation>().Play("AnswerFailBtnAnim");
             audio.PlayOneShot(failAudio);
         }
     }
@@ -91,7 +97,7 @@ public class HandsTestScript : MonoBehaviour
         correctButtonGO = choiseButtons[correctButton].gameObject;
         buttonId.Remove(correctButton);//Убрали из маски правильную кнопку
 
-        choiseButtons[correctButton].onClick.AddListener(() => BtnAnswer(true, null));//Добавили правильной кнопке он клик правильный
+        choiseButtons[correctButton].onClick.AddListener(() => BtnAnswer(true));//Добавили правильной кнопке он клик правильный
 
         for (int i = 0; i < buttonId.Count; i++)//В оставшиеся кнопки
         {
@@ -99,7 +105,8 @@ public class HandsTestScript : MonoBehaviour
             questionsIdList.Remove(falseQuestionId);//Убрали из маски
             choiseButtons[buttonId[i]].GetComponentInChildren<TextMeshProUGUI>().text =
                 questionIntString[falseQuestionId];//Задали текст
-            choiseButtons[buttonId[i]].onClick.AddListener(() => BtnAnswer(false, choiseButtons[buttonId[i]].gameObject));//Задали он клик
+            choiseButtons[buttonId[i]].onClick.AddListener(() => BtnAnswer(false));//Задали он клик
+            choiseButtons[buttonId[i]].onClick.AddListener((() => Click(choiseButtons[buttonId[i]].gameObject)));
         }
         characterAnimator.SetInteger("State", questionId);//Включили анимашку
     }
