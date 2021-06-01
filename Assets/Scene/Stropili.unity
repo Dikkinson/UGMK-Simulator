@@ -645,7 +645,7 @@ MonoBehaviour:
   EndTest: {fileID: 369725816}
   stropi:
   - {fileID: 4546270117779721656}
-  - {fileID: 1172294401}
+  - {fileID: 1632746383}
   - {fileID: 1172294398}
   - {fileID: 4072314725173101266}
   - {fileID: 1516636826}
@@ -5194,11 +5194,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.87187, y: 0.5392921, z: 1.7520704}
   m_Center: {x: 0.0033273697, y: 0.195598, z: 0.0033278465}
---- !u!1 &1172294401 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8730734776364449234, guid: 838c507e988ceef418e66b2b858bfadd, type: 3}
-  m_PrefabInstance: {fileID: 1172294396}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1204068374
 GameObject:
   m_ObjectHideFlags: 0
@@ -7212,6 +7207,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1627619181}
   m_CullTransparentMesh: 1
+--- !u!1 &1632746383 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1293082211368213236, guid: 838c507e988ceef418e66b2b858bfadd, type: 3}
+  m_PrefabInstance: {fileID: 1172294396}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1636589623
 GameObject:
   m_ObjectHideFlags: 0
